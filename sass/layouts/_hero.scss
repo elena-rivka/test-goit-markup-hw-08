@@ -1,0 +1,68 @@
+.hero {
+        text-align: center;
+        margin: 0 auto;
+        padding: 118px 60px;
+        max-width: 100%;
+
+        display: flex;
+        justify-content: center;
+        
+        background-image: var(--gradient),
+        url(../images/img-bg-mob.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: $color-bg;
+        
+        @include retina {
+                background-image: var(--gradient),
+                url(../images/2x-bg-mob.jpg);
+        }
+
+        @include tablet {
+                padding: 118px 204px;
+                max-width: 768px;
+                height: 400px;
+                background-image: var(--gradient),
+                        url(../images/img-bg-tablet.jpg);
+                @include retina {
+                        background-image: var(--gradient),
+                        url(../images/2x-bg-tablet.jpg);
+                }
+        }
+        @include desktop {
+                padding: 200px 0;
+                max-width: 1600px;
+                height: 600px;
+                background-image: var(--gradient),
+                        url(../images/img-bg.jpg);          
+                @include retina {
+                        background-image: var(--gradient),
+                        url(../images/2x-bg.jpg);
+                }
+        }
+}
+
+.hero__title {
+        margin: 0 auto;
+        max-width: 696px;
+        margin-bottom: 30px;
+
+        color: $primary-white-color;
+
+        font-weight: 900;
+        font-size: 26px;
+        line-height: 1.61;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        
+        @include tablet {
+                font-size: 26px;
+                line-height: 1.61;
+        }
+        @include desktop {
+                font-size: 44px;
+                line-height: 1.36;
+        }
+}
+
